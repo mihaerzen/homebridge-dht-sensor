@@ -25,15 +25,14 @@ const getAirQuality = ({pm25, pm10}): number => {
 export const fetchAirQuality = async (): Promise<{
   aiq: number; pm25: number; pm10: number;
 }> => {
-  const response: {
+  const {data} = await axios.get<{
     pm25: number;
     pm10: number;
-  } = await axios.get('http://localhost:3000');
+  }>('http://localhost:3000');
 
-  const {pm25, pm10} = response;
-  const aiq = getAirQuality(response);
+  const aiq = getAirQuality(data);
 
   return {
-    aiq, pm25, pm10,
+    aiq, ...data,
   };
 };
