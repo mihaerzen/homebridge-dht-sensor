@@ -1,4 +1,4 @@
-import fetch from 'node-fetch';
+import axios from 'axios';
 
 const limits25 = [15, 30, 55, 110];
 const limits10 = [25, 50, 90, 180];
@@ -28,7 +28,7 @@ export const fetchAirQuality = async (): Promise<{
   const response: {
     pm25: number;
     pm10: number;
-  } = await fetch('http://localhost:3000').then(r => r.json()) as any;
+  } = await axios.get('http://localhost:3000');
 
   const {pm25, pm10} = response;
   const aiq = getAirQuality(response);

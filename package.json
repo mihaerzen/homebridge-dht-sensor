@@ -4,7 +4,6 @@
   "version": "1.0.0",
   "description": "Plugin for dht sensor.",
   "license": "Apache-2.0",
-  "type": "module",
   "repository": {
     "type": "git",
     "url": "git://github.com/mihaerzen/homebridge-dht-sensor"
@@ -27,8 +26,8 @@
     "homebridge-plugin"
   ],
   "dependencies": {
-    "node-dht-sensor": "git+https://github.com/Sly1024/node-dht-sensor.git#285a758064dbdd7fc4cb76988ad17447aa90e89a",
-    "node-fetch": "^3.1.0"
+    "axios": "^0.24.0",
+    "node-dht-sensor": "git+https://github.com/Sly1024/node-dht-sensor.git#285a758064dbdd7fc4cb76988ad17447aa90e89a"
   },
   "devDependencies": {
     "@types/node": "^17.0.0",
