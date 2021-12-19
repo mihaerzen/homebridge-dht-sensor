@@ -48,18 +48,6 @@ class DhtSensorPlugin implements AccessoryPlugin {
       .on('get', this.handleCurrentRelativeHumidityGet.bind(this));
 
     this.airQualitySensor.getCharacteristic(AirQuality).on('get', this.handleCurrentAirQualityGet.bind(this));
-
-    setInterval(async () => {
-      this.handleCurrentTemperatureGet(() => {
-        //
-      });
-      this.handleCurrentRelativeHumidityGet(() => {
-        //
-      });
-      this.handleCurrentAirQualityGet(() => {
-        //
-      });
-    }, 60 * 1000);
   }
 
   async readSensor() {
