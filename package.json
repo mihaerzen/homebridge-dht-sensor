@@ -26,7 +26,8 @@
     "homebridge-plugin"
   ],
   "dependencies": {
-    "node-dht-sensor": "git+https://github.com/Sly1024/node-dht-sensor.git#285a758064dbdd7fc4cb76988ad17447aa90e89a"
+    "node-dht-sensor": "git+https://github.com/Sly1024/node-dht-sensor.git#285a758064dbdd7fc4cb76988ad17447aa90e89a",
+    "node-fetch": "^3.1.0"
   },
   "devDependencies": {
     "@types/node": "^17.0.0",
