@@ -14,7 +14,7 @@ let hap: HAP;
 /*
  * Initializer function called when the plugin is loaded.
  */
-export = (api: API) => {
+export default (api: API) => {
   hap = api.hap;
   api.registerAccessory('DhtSensorPlugin', DhtSensorPlugin);
 };
