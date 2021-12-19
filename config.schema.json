@@ -1,5 +1,5 @@
 {
-  "pluginAlias": "DhtHomebridgePlugin",
+  "pluginAlias": "DhtSensorPlugin",
   "pluginType": "accessory",
   "singular": false,
   "schema": {
